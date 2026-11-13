@@ -4,7 +4,7 @@
 - **Physical Capacity**: The test machine is configured with 16.0 GB of unified LPDDR5 memory shared dynamically between CPU cores, GPU execution units, and the Apple Neural Engine (ANE).
 - **macOS System Memory Pressure**: macOS dynamically reserves 4 to 6 GB for the Darwin kernel, WindowServer, system daemons, and application working sets. When active memory allocation exceeds ~12 GB, macOS invokes the compressed memory compressor (`vm_compressor`) and secondary SSD swap paging (`/var/vm/swapfile*`).
 - **Unified Memory Bandwidth vs Cache Size**:
-  While smaller quantized KV caches drastically reduce DRAM memory traffic during decoding (allowing INT8 to outperform FP16 decode throughput by up to +28.6% at 8192 context length), prefill latency is compute- and attention-bound ($O(N^2)$ dot-product attention scaling).
+  While smaller quantized KV caches drastically reduce DRAM memory traffic during decoding, at batch size 1 on Apple Silicon M4, the arithmetic cost of dequantizing scales and biases inside the attention kernel causes a median decode throughput drop of approximately 13.8% (43.16 tok/s for INT8 vs 50.05 tok/s for FP16 at 8,192 context). Prefill latency also experiences overhead (TTFT increases from 14.5s to 38.9s) due to quantization kernel scheduling.
 
 ## 2. MLX and Kernel-Level Quantization Constraints
 - **Granular Buffer Chunking**:

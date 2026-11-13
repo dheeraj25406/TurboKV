@@ -67,6 +67,10 @@ class MemoryEstimator:
             return 0
         return ((seq_len + self.step_chunk_size - 1) // self.step_chunk_size) * self.step_chunk_size
 
+    def estimate_cache_memory_mb(self, sequence_length: int, cache_config: CacheConfig) -> float:
+        """Convenience method returning theoretical cache memory in MB."""
+        return self.estimate(sequence_length, cache_config).total_mb
+
     def estimate(
         self,
         sequence_length: int,

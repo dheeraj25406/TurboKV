@@ -53,6 +53,20 @@ HELDOUT_FACTS = [
     ("The specialized alloy composition for turbine blades is nickel-chromium alloy Nimonic-90.", "What is the specialized alloy composition for turbine blades?", "nickel-chromium alloy Nimonic-90"),
     ("The encryption initialization vector for message packet zero is 0x7F2A9B1C.", "What is the encryption initialization vector for message packet zero?", "0x7F2A9B1C"),
     ("The measured stellar parallax of the target star system is 12.45 milliarcseconds.", "What is the measured stellar parallax of the target star system?", "12.45 milliarcseconds"),
+    ("The thermal degradation threshold of sealant compound K-4 is 482.5 degrees Celsius.", "What is the thermal degradation threshold of sealant compound K-4?", "482.5 degrees Celsius"),
+    ("The orbital inclination of reconnaissance platform Zephyr is 64.8 degrees.", "What is the orbital inclination of reconnaissance platform Zephyr?", "64.8 degrees"),
+    ("The cryptographic authentication hash for node Echo is SHA256-9F81E3B7.", "What is the cryptographic authentication hash for node Echo?", "SHA256-9F81E3B7"),
+    ("The specific impulse of propellant mixture Hydrazine-7 is 312 seconds.", "What is the specific impulse of propellant mixture Hydrazine-7?", "312 seconds"),
+    ("The quantum coherence dephasing time for qubit cluster four is 84.2 microseconds.", "What is the quantum coherence dephasing time for qubit cluster four?", "84.2 microseconds"),
+    ("The resonant acoustic frequency of the containment chamber is 528.4 hertz.", "What is the resonant acoustic frequency of the containment chamber?", "528.4 hertz"),
+    ("The maximum payload capacity of cargo module Atlas is 14250 kilograms.", "What is the maximum payload capacity of cargo module Atlas?", "14250 kilograms"),
+    ("The magnetic flux density at the focal center is 2.85 teslas.", "What is the magnetic flux density at the focal center?", "2.85 teslas"),
+    ("The optical absorption coefficient of protective filter V-9 is 99.82 percent.", "What is the optical absorption coefficient of protective filter V-9?", "99.82 percent"),
+    ("The hydraulic line pressure in landing gear assembly C is 3050 psi.", "What is the hydraulic line pressure in landing gear assembly C?", "3050 psi"),
+    ("The telemetry baud rate for deep-space probe Horizon is 115200 symbols per second.", "What is the telemetry baud rate for deep-space probe Horizon?", "115200 symbols per second"),
+    ("The critical superconducting transition temperature of wire batch N-12 is 9.3 kelvins.", "What is the critical superconducting transition temperature of wire batch N-12?", "9.3 kelvins"),
+    ("The biological half-life of tracing isotope Technetium-99m in sample Q is 6.01 hours.", "What is the biological half-life of tracing isotope Technetium-99m in sample Q?", "6.01 hours"),
+    ("The safe working depth of research submersible Abyss-3 is 4200 meters.", "What is the safe working depth of research submersible Abyss-3?", "4200 meters"),
 ]
 
 

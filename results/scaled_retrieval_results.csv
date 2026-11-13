@@ -1,0 +1,13 @@
+context_length,configuration,total_samples,exact_match_successes,exact_match_accuracy,normalized_accuracy,ci95_low,ci95_high,top1_agreement,accuracy_by_position
+1024,FP16,7,7,1.0,1.0,0.6457,1.0,1.0,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+1024,"INT8 (g64, s0)",7,7,1.0,1.0,0.6457,1.0,0.433,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+1024,"INT4 (g64, s0)",7,0,0.0,0.0,0.0,0.3543,0.0045,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"
+1024,"Delayed INT4 (g64, s512)",7,0,0.0,0.0,0.0,0.3543,0.0089,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"
+2048,FP16,7,6,0.8571428571428571,1.0,0.4869,0.9743,1.0,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+2048,"INT8 (g64, s0)",7,6,0.8571428571428571,1.0,0.4869,0.9743,0.4643,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+2048,"INT4 (g64, s0)",7,0,0.0,0.0,0.0,0.3543,0.0134,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"
+2048,"Delayed INT4 (g64, s512)",7,0,0.0,0.0,0.0,0.3543,0.0179,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"
+4096,FP16,7,6,0.8571428571428571,1.0,0.4869,0.9743,1.0,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+4096,"INT8 (g64, s0)",7,6,0.8571428571428571,1.0,0.4869,0.9743,0.3705,"{'beginning': 1.0, 'middle': 1.0, 'end': 1.0}"
+4096,"INT4 (g64, s0)",7,0,0.0,0.0,0.0,0.3543,0.0,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"
+4096,"Delayed INT4 (g64, s512)",7,0,0.0,0.0,0.0,0.3543,0.0134,"{'beginning': 0.0, 'middle': 0.0, 'end': 0.0}"

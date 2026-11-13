@@ -1,0 +1,194 @@
+[
+  {
+    "context_length": 1024,
+    "configuration": "FP16",
+    "total_samples": 7,
+    "exact_match_successes": 7,
+    "exact_match_accuracy": 1.0,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.6457,
+    "ci95_high": 1.0,
+    "top1_agreement": 1.0,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 1024,
+    "configuration": "INT8 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 7,
+    "exact_match_accuracy": 1.0,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.6457,
+    "ci95_high": 1.0,
+    "top1_agreement": 0.433,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 1024,
+    "configuration": "INT4 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0045,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  {
+    "context_length": 1024,
+    "configuration": "Delayed INT4 (g64, s512)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0089,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  {
+    "context_length": 2048,
+    "configuration": "FP16",
+    "total_samples": 7,
+    "exact_match_successes": 6,
+    "exact_match_accuracy": 0.8571428571428571,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.4869,
+    "ci95_high": 0.9743,
+    "top1_agreement": 1.0,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 2048,
+    "configuration": "INT8 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 6,
+    "exact_match_accuracy": 0.8571428571428571,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.4869,
+    "ci95_high": 0.9743,
+    "top1_agreement": 0.4643,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 2048,
+    "configuration": "INT4 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0134,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  {
+    "context_length": 2048,
+    "configuration": "Delayed INT4 (g64, s512)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0179,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  {
+    "context_length": 4096,
+    "configuration": "FP16",
+    "total_samples": 7,
+    "exact_match_successes": 6,
+    "exact_match_accuracy": 0.8571428571428571,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.4869,
+    "ci95_high": 0.9743,
+    "top1_agreement": 1.0,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 4096,
+    "configuration": "INT8 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 6,
+    "exact_match_accuracy": 0.8571428571428571,
+    "normalized_accuracy": 1.0,
+    "ci95_low": 0.4869,
+    "ci95_high": 0.9743,
+    "top1_agreement": 0.3705,
+    "accuracy_by_position": {
+      "beginning": 1.0,
+      "middle": 1.0,
+      "end": 1.0
+    }
+  },
+  {
+    "context_length": 4096,
+    "configuration": "INT4 (g64, s0)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  },
+  {
+    "context_length": 4096,
+    "configuration": "Delayed INT4 (g64, s512)",
+    "total_samples": 7,
+    "exact_match_successes": 0,
+    "exact_match_accuracy": 0.0,
+    "normalized_accuracy": 0.0,
+    "ci95_low": 0.0,
+    "ci95_high": 0.3543,
+    "top1_agreement": 0.0134,
+    "accuracy_by_position": {
+      "beginning": 0.0,
+      "middle": 0.0,
+      "end": 0.0
+    }
+  }
+]
