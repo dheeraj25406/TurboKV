@@ -134,7 +134,7 @@ Evaluated across 21 strictly disjoint test instances spanning 3 context lengths 
 
 ```bash
 # Clone the repository
-git clone https://github.com/dheerajalamuri/TurboKV.git
+git clone https://github.com/dheeraj25406/TurboKV.git
 cd TurboKV
 
 # Create Python 3.11 virtual environment
