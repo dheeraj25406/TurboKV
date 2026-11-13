@@ -1,0 +1,3415 @@
+[
+  {
+    "context_length": 1024,
+    "memory_budget_mb": 15.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 15.0 MB. Details: fp16: Memory 35.0 MB exceeds budget 15.0 MB; int8_g64_s0: Memory 18.6 MB exceeds budget 15.0 MB; int8_g32_s0: Memory 19.7 MB exceeds budget 15.0 MB, Latency slowdown 38.7% exceeds max regression 20.0%; int8_g64_s512: Memory 18.6 MB exceeds budget 15.0 MB; int4_g64_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g32_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 28.0,
+        "measured_memory_mb": 35.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 35.0 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 14.875,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 3.7764117168584646,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 18.6 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 38.675528066624175,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 19.7 MB exceeds budget 15.0 MB",
+          "Latency slowdown 38.7% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 21.4375,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 12.006905697713051,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 18.6 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 7.875,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 7.107944728342589,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 8.75,
+        "measured_memory_mb": 10.9375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 17.9375,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 4.233534520062484,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 2048,
+    "memory_budget_mb": 15.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 15.0 MB. Details: fp16: Memory 63.0 MB exceeds budget 15.0 MB; int8_g64_s0: Memory 33.5 MB exceeds budget 15.0 MB; int8_g32_s0: Memory 35.4 MB exceeds budget 15.0 MB; int8_g64_s512: Memory 33.5 MB exceeds budget 15.0 MB; int4_g64_s0: Memory 17.7 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 46.9% exceeds max regression 20.0%; int4_g32_s0: Memory 19.7 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 36.2% exceeds max regression 20.0%; int4_g64_s512: Memory 17.7 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 22.6% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 56.0,
+        "measured_memory_mb": 63.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.0 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 29.75,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 35.4375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 35.4 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 36.3125,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 8.94387672342321,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 46.94634672608198,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 17.7 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 46.9% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 17.5,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 36.17503033053044,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 19.7 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 36.2% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 25.8125,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 22.605761569041714,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 17.7 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 22.6% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 4096,
+    "memory_budget_mb": 15.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 15.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 15.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 15.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 15.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 15.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Memory 33.5 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Memory 37.2 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Memory 33.5 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 112.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 59.5,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 15.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 66.0625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 15.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 35.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 37.2 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 41.5625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 8192,
+    "memory_budget_mb": 15.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 15.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 15.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 15.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 15.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 15.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Memory 33.5 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Memory 37.2 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Memory 33.5 MB exceeds budget 15.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 224.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 119.0,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 15.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 126.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 15.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 125.5625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 15.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 70.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 37.2 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 73.0625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 15.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 1024,
+    "memory_budget_mb": 30.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 14.9 MB (vs budget 30.0 MB), accuracy drop 0.000 <= 0.050, latency regression 3.8% <= 20.0%.",
+    "expected_memory_mb": 14.875,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.32657378813093,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 28.0,
+        "measured_memory_mb": 35.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 35.0 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 14.875,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 3.7764117168584646,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 38.675528066624175,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 38.7% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 21.4375,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 12.006905697713051,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 7.875,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 7.107944728342589,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 8.75,
+        "measured_memory_mb": 10.9375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 17.9375,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 4.233534520062484,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 2048,
+    "memory_budget_mb": 30.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 30.0 MB. Details: fp16: Memory 63.0 MB exceeds budget 30.0 MB; int8_g64_s0: Memory 33.5 MB exceeds budget 30.0 MB; int8_g32_s0: Memory 35.4 MB exceeds budget 30.0 MB; int8_g64_s512: Memory 33.5 MB exceeds budget 30.0 MB; int4_g64_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 46.9% exceeds max regression 20.0%; int4_g32_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 36.2% exceeds max regression 20.0%; int4_g64_s512: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 22.6% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 56.0,
+        "measured_memory_mb": 63.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.0 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 29.75,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 35.4375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 35.4 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 36.3125,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 8.94387672342321,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 46.94634672608198,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 46.9% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 17.5,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 36.17503033053044,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 36.2% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 25.8125,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 22.605761569041714,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 22.6% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 4096,
+    "memory_budget_mb": 30.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 30.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 30.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 30.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 30.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 30.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Memory 33.5 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Memory 37.2 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Memory 33.5 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 112.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 59.5,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 30.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 66.0625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 30.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 35.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 37.2 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 41.5625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 8192,
+    "memory_budget_mb": 30.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 30.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 30.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 30.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 30.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 30.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Memory 33.5 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Memory 37.2 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Memory 33.5 MB exceeds budget 30.0 MB, Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 224.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 119.0,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 30.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 126.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 30.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 125.5625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 30.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 70.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 37.2 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 73.0625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 33.5 MB exceeds budget 30.0 MB",
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 1024,
+    "memory_budget_mb": 60.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 14.9 MB (vs budget 60.0 MB), accuracy drop 0.000 <= 0.050, latency regression 3.8% <= 20.0%.",
+    "expected_memory_mb": 14.875,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.32657378813093,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 28.0,
+        "measured_memory_mb": 35.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 14.875,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 3.7764117168584646,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 38.675528066624175,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 38.7% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 21.4375,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 12.006905697713051,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 7.875,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 7.107944728342589,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 8.75,
+        "measured_memory_mb": 10.9375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 17.9375,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 4.233534520062484,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 2048,
+    "memory_budget_mb": 60.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 29.8 MB (vs budget 60.0 MB), accuracy drop 0.000 <= 0.050, latency regression 0.0% <= 20.0%.",
+    "expected_memory_mb": 29.75,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.66100438899433,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 56.0,
+        "measured_memory_mb": 63.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.0 MB exceeds budget 60.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 29.75,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 35.4375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 36.3125,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 8.94387672342321,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 46.94634672608198,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 46.9% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 17.5,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 36.17503033053044,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 36.2% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 25.8125,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 22.605761569041714,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 22.6% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 4096,
+    "memory_budget_mb": 60.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 60.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 60.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 60.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 60.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 60.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 112.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 60.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 59.5,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 60.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 60.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 66.0625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 60.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 35.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 41.5625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 8192,
+    "memory_budget_mb": 60.0,
+    "chosen_config": null,
+    "is_feasible": false,
+    "fallback_to_fp16": false,
+    "decision_reason": "Workload infeasible: No cache configuration satisfied all constraints within memory budget of 60.0 MB. Details: fp16: Memory 119.0 MB exceeds budget 60.0 MB; int8_g64_s0: Memory 63.2 MB exceeds budget 60.0 MB; int8_g32_s0: Memory 66.9 MB exceeds budget 60.0 MB, Latency slowdown 28.4% exceeds max regression 20.0%; int8_g64_s512: Memory 63.2 MB exceeds budget 60.0 MB, Latency slowdown 36.6% exceeds max regression 20.0%; int4_g64_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 52.4% exceeds max regression 20.0%; int4_g32_s0: Accuracy drop 0.667 exceeds maximum allowed drop 0.050; int4_g64_s512: Accuracy drop 0.667 exceeds maximum allowed drop 0.050, Latency slowdown 28.3% exceeds max regression 20.0%",
+    "expected_memory_mb": 0.0,
+    "expected_accuracy": null,
+    "expected_tokens_per_sec": null,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 224.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 60.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 119.0,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 60.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 126.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 66.9 MB exceeds budget 60.0 MB",
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 125.5625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 63.2 MB exceeds budget 60.0 MB",
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 70.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 73.0625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 1024,
+    "memory_budget_mb": 100.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 14.9 MB (vs budget 100.0 MB), accuracy drop 0.000 <= 0.050, latency regression 3.8% <= 20.0%.",
+    "expected_memory_mb": 14.875,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.32657378813093,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 28.0,
+        "measured_memory_mb": 35.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 14.875,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 3.7764117168584646,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 38.675528066624175,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 38.7% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 21.4375,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 12.006905697713051,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 7.875,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 7.107944728342589,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 8.75,
+        "measured_memory_mb": 10.9375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 17.9375,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 4.233534520062484,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 2048,
+    "memory_budget_mb": 100.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 29.8 MB (vs budget 100.0 MB), accuracy drop 0.000 <= 0.050, latency regression 0.0% <= 20.0%.",
+    "expected_memory_mb": 29.75,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.66100438899433,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 56.0,
+        "measured_memory_mb": 63.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 29.75,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 35.4375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 36.3125,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 8.94387672342321,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 46.94634672608198,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 46.9% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 17.5,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 36.17503033053044,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 36.2% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 25.8125,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 22.605761569041714,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 22.6% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 4096,
+    "memory_budget_mb": 100.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 59.5 MB (vs budget 100.0 MB), accuracy drop 0.000 <= 0.050, latency regression 1.2% <= 20.0%.",
+    "expected_memory_mb": 59.5,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 63.57713132083492,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 112.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 100.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 59.5,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 66.0625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 35.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 41.5625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 8192,
+    "memory_budget_mb": 100.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 119.0 MB (vs budget 100.0 MB), accuracy drop 0.000 <= 0.050, latency regression 1.2% <= 20.0%.",
+    "expected_memory_mb": 119.0,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 63.57713132083492,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 224.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": false,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Memory 119.0 MB exceeds budget 100.0 MB"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 119.0,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 126.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 125.5625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 70.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 73.0625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 1024,
+    "memory_budget_mb": 200.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 14.9 MB (vs budget 200.0 MB), accuracy drop 0.000 <= 0.050, latency regression 3.8% <= 20.0%.",
+    "expected_memory_mb": 14.875,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.32657378813093,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 28.0,
+        "measured_memory_mb": 35.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 14.875,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 3.7764117168584646,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 38.675528066624175,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 38.7% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 21.4375,
+        "measured_memory_mb": 18.59375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 12.006905697713051,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 7.875,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 7.107944728342589,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 8.75,
+        "measured_memory_mb": 10.9375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 17.9375,
+        "measured_memory_mb": 9.84375,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 4.233534520062484,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 2048,
+    "memory_budget_mb": 200.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 29.8 MB (vs budget 200.0 MB), accuracy drop 0.000 <= 0.050, latency regression 0.0% <= 20.0%.",
+    "expected_memory_mb": 29.75,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 68.66100438899433,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 56.0,
+        "measured_memory_mb": 63.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 29.75,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 35.4375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 36.3125,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 8.94387672342321,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 15.75,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 46.94634672608198,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 46.9% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 17.5,
+        "measured_memory_mb": 19.6875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 36.17503033053044,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 36.2% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 25.8125,
+        "measured_memory_mb": 17.71875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 22.605761569041714,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 22.6% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 4096,
+    "memory_budget_mb": 200.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 59.5 MB (vs budget 200.0 MB), accuracy drop 0.000 <= 0.050, latency regression 1.2% <= 20.0%.",
+    "expected_memory_mb": 59.5,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 63.57713132083492,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 112.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 59.5,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 66.0625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 31.5,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 35.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 41.5625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  },
+  {
+    "context_length": 8192,
+    "memory_budget_mb": 200.0,
+    "chosen_config": {
+      "precision": "int8",
+      "bits": 8,
+      "group_size": 64,
+      "quantized_start": 0,
+      "key": "int8_g64_s0"
+    },
+    "is_feasible": true,
+    "fallback_to_fp16": false,
+    "decision_reason": "Selected optimal configuration int8_g64_s0: Fits budget with 119.0 MB (vs budget 200.0 MB), accuracy drop 0.000 <= 0.050, latency regression 1.2% <= 20.0%.",
+    "expected_memory_mb": 119.0,
+    "expected_accuracy": 0.6666666666666666,
+    "expected_tokens_per_sec": 63.57713132083492,
+    "evaluated_candidates": [
+      {
+        "cache_config": {
+          "precision": "fp16",
+          "bits": null,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "fp16"
+        },
+        "estimated_memory_mb": 224.0,
+        "measured_memory_mb": 119.0,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int8_g64_s0"
+        },
+        "estimated_memory_mb": 119.0,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 1.214366074132597,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": true,
+        "is_feasible": true,
+        "rejection_reasons": []
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int8_g32_s0"
+        },
+        "estimated_memory_mb": 126.0,
+        "measured_memory_mb": 66.9375,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 28.44273567143939,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 28.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int8",
+          "bits": 8,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int8_g64_s512"
+        },
+        "estimated_memory_mb": 125.5625,
+        "measured_memory_mb": 63.21875,
+        "retrieval_accuracy": 0.6666666666666666,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "accuracy_drop": 0.0,
+        "latency_regression_pct": 36.55509019327701,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": true,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Latency slowdown 36.6% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 0,
+          "key": "int4_g64_s0"
+        },
+        "estimated_memory_mb": 63.0,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 52.391559574304466,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 52.4% exceeds max regression 20.0%"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 32,
+          "quantized_start": 0,
+          "key": "int4_g32_s0"
+        },
+        "estimated_memory_mb": 70.0,
+        "measured_memory_mb": 37.1875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 0.0,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": true,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050"
+        ]
+      },
+      {
+        "cache_config": {
+          "precision": "int4",
+          "bits": 4,
+          "group_size": 64,
+          "quantized_start": 512,
+          "key": "int4_g64_s512"
+        },
+        "estimated_memory_mb": 73.0625,
+        "measured_memory_mb": 33.46875,
+        "retrieval_accuracy": 0.0,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "accuracy_drop": 0.6666666666666666,
+        "latency_regression_pct": 28.304441051545957,
+        "fits_memory_budget": true,
+        "satisfies_quality_constraint": false,
+        "satisfies_latency_constraint": false,
+        "is_feasible": false,
+        "rejection_reasons": [
+          "Accuracy drop 0.667 exceeds maximum allowed drop 0.050",
+          "Latency slowdown 28.3% exceeds max regression 20.0%"
+        ]
+      }
+    ]
+  }
+]

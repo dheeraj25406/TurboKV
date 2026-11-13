@@ -1,0 +1,609 @@
+{
+  "version": "1.0.0",
+  "model_name": "Qwen2.5-1.5B-Instruct-4bit",
+  "hardware": "Apple M4 (16 GB Unified Memory)",
+  "timestamp": "2026-11-13 11:47:16",
+  "context_lengths": [
+    1024,
+    2048,
+    4096
+  ],
+  "by_context_length": {
+    "1024": {
+      "fp16": {
+        "config_key": "fp16",
+        "precision": "fp16",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 35.0,
+        "ttft_ms": 3392.0182080037193,
+        "decode_tokens_per_sec": 71.00813325218907,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 1.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 0.0,
+        "top1_agreement_rate": 1.0,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s0": {
+        "config_key": "int8_g64_s0",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 18.59375,
+        "ttft_ms": 3507.5649579957826,
+        "decode_tokens_per_sec": 68.32657378813093,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 1.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.696295130342458,
+        "top1_agreement_rate": 0.4270833333333333,
+        "perplexity": 28.940279382223952
+      },
+      "int8_g32_s0": {
+        "config_key": "int8_g32_s0",
+        "precision": "int8",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 19.6875,
+        "ttft_ms": 3769.3606249958975,
+        "decode_tokens_per_sec": 43.54536274665279,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 1.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.65502208084623,
+        "top1_agreement_rate": 0.4270833333333333,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s512": {
+        "config_key": "int8_g64_s512",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 18.59375,
+        "ttft_ms": 4061.646959002246,
+        "decode_tokens_per_sec": 62.482253654892304,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 1.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.353244988893044,
+        "top1_agreement_rate": 0.4375,
+        "perplexity": 28.827451925481085
+      },
+      "int4_g64_s0": {
+        "config_key": "int4_g64_s0",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 9.84375,
+        "ttft_ms": 3035.1193330134265,
+        "decode_tokens_per_sec": 65.96091438799562,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 9.483923809820325,
+        "top1_agreement_rate": 0.010416666666666666,
+        "perplexity": 6770.380038480667
+      },
+      "int4_g32_s0": {
+        "config_key": "int4_g32_s0",
+        "precision": "int4",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 10.9375,
+        "ttft_ms": 3082.671833995846,
+        "decode_tokens_per_sec": 73.6629361458524,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 9.24496155689976,
+        "top1_agreement_rate": 0.020833333333333332,
+        "perplexity": 1464.1973685237601
+      },
+      "int4_g64_s512": {
+        "config_key": "int4_g64_s512",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 9.84375,
+        "ttft_ms": 3077.3293750098674,
+        "decode_tokens_per_sec": 68.00197941890568,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.514770109109818,
+        "top1_agreement_rate": 0.020833333333333332,
+        "perplexity": 28.827451925481085
+      }
+    },
+    "2048": {
+      "fp16": {
+        "config_key": "fp16",
+        "precision": "fp16",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 63.0,
+        "ttft_ms": 5599.48579200136,
+        "decode_tokens_per_sec": 67.63264393931401,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 0.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 0.0,
+        "top1_agreement_rate": 1.0,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s0": {
+        "config_key": "int8_g64_s0",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 33.46875,
+        "ttft_ms": 5903.3005829987815,
+        "decode_tokens_per_sec": 68.66100438899433,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 0.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 8.104396284940416,
+        "top1_agreement_rate": 0.4479166666666667,
+        "perplexity": 28.940279382223952
+      },
+      "int8_g32_s0": {
+        "config_key": "int8_g32_s0",
+        "precision": "int8",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 35.4375,
+        "ttft_ms": 7035.693083002116,
+        "decode_tokens_per_sec": 70.70540904866712,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 0.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 7.756967765904733,
+        "top1_agreement_rate": 0.4583333333333333,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s512": {
+        "config_key": "int8_g64_s512",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 33.46875,
+        "ttft_ms": 7645.022832992254,
+        "decode_tokens_per_sec": 61.583663640590004,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 1.0,
+          "middle": 0.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 7.649641357557537,
+        "top1_agreement_rate": 0.4375,
+        "perplexity": 28.827451925481085
+      },
+      "int4_g64_s0": {
+        "config_key": "int4_g64_s0",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 17.71875,
+        "ttft_ms": 6574.951458998839,
+        "decode_tokens_per_sec": 35.881588415547185,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 10.10430255138582,
+        "top1_agreement_rate": 0.0,
+        "perplexity": 6770.380038480667
+      },
+      "int4_g32_s0": {
+        "config_key": "int4_g32_s0",
+        "precision": "int4",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 19.6875,
+        "ttft_ms": 6179.667042000801,
+        "decode_tokens_per_sec": 43.16651448092751,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.986924718207723,
+        "top1_agreement_rate": 0.010416666666666666,
+        "perplexity": 1464.1973685237601
+      },
+      "int4_g64_s512": {
+        "config_key": "int4_g64_s512",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 17.71875,
+        "ttft_ms": 5370.597417000681,
+        "decode_tokens_per_sec": 52.34376970755374,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 9.118116507832966,
+        "top1_agreement_rate": 0.020833333333333332,
+        "perplexity": 28.827451925481085
+      }
+    },
+    "4096": {
+      "fp16": {
+        "config_key": "fp16",
+        "precision": "fp16",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 119.0,
+        "ttft_ms": 12016.506707994267,
+        "decode_tokens_per_sec": 64.35868131245246,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 1.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 0.0,
+        "top1_agreement_rate": 1.0,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s0": {
+        "config_key": "int8_g64_s0",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 63.21875,
+        "ttft_ms": 40817.81366599898,
+        "decode_tokens_per_sec": 63.57713132083492,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 1.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 9.111868934537599,
+        "top1_agreement_rate": 0.40625,
+        "perplexity": 28.940279382223952
+      },
+      "int8_g32_s0": {
+        "config_key": "int8_g32_s0",
+        "precision": "int8",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 66.9375,
+        "ttft_ms": 15239.354541001376,
+        "decode_tokens_per_sec": 46.05331170512755,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 1.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 5.6114293395005035,
+        "top1_agreement_rate": 0.6145833333333334,
+        "perplexity": 28.827451925481085
+      },
+      "int8_g64_s512": {
+        "config_key": "int8_g64_s512",
+        "precision": "int8",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 63.21875,
+        "ttft_ms": 11622.527749990695,
+        "decode_tokens_per_sec": 40.83230731148175,
+        "retrieval_accuracy": 0.6666666666666666,
+        "retrieval_em_accuracy": 0.6666666666666666,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 1.0,
+          "end": 1.0
+        },
+        "mean_kl_divergence": 9.5666419815108,
+        "top1_agreement_rate": 0.40625,
+        "perplexity": 28.827451925481085
+      },
+      "int4_g64_s0": {
+        "config_key": "int4_g64_s0",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 0,
+        "measured_cache_mb": 33.46875,
+        "ttft_ms": 12730.164666994824,
+        "decode_tokens_per_sec": 30.64016445140217,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 9.920070576874247,
+        "top1_agreement_rate": 0.0,
+        "perplexity": 6770.380038480667
+      },
+      "int4_g32_s0": {
+        "config_key": "int4_g32_s0",
+        "precision": "int4",
+        "group_size": 32,
+        "quantized_start": 0,
+        "measured_cache_mb": 37.1875,
+        "ttft_ms": 12148.183042008895,
+        "decode_tokens_per_sec": 66.03413548161616,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 8.765159696343646,
+        "top1_agreement_rate": 0.0,
+        "perplexity": 1464.1973685237601
+      },
+      "int4_g64_s512": {
+        "config_key": "int4_g64_s512",
+        "precision": "int4",
+        "group_size": 64,
+        "quantized_start": 512,
+        "measured_cache_mb": 33.46875,
+        "ttft_ms": 14017.36987500044,
+        "decode_tokens_per_sec": 46.14231629881703,
+        "retrieval_accuracy": 0.0,
+        "retrieval_em_accuracy": 0.0,
+        "accuracy_by_position": {
+          "beginning": 0.0,
+          "middle": 0.0,
+          "end": 0.0
+        },
+        "mean_kl_divergence": 10.162373253378211,
+        "top1_agreement_rate": 0.03125,
+        "perplexity": 28.827451925481085
+      }
+    }
+  },
+  "summary_table": [
+    {
+      "context_length": 1024,
+      "config_key": "fp16",
+      "measured_cache_mb": 35.0,
+      "decode_tps": 71.00813325218907,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 0.0,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int8_g64_s0",
+      "measured_cache_mb": 18.59375,
+      "decode_tps": 68.32657378813093,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 8.696295130342458,
+      "perplexity": 28.940279382223952
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int8_g32_s0",
+      "measured_cache_mb": 19.6875,
+      "decode_tps": 43.54536274665279,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 8.65502208084623,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int8_g64_s512",
+      "measured_cache_mb": 18.59375,
+      "decode_tps": 62.482253654892304,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 8.353244988893044,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int4_g64_s0",
+      "measured_cache_mb": 9.84375,
+      "decode_tps": 65.96091438799562,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 9.483923809820325,
+      "perplexity": 6770.380038480667
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int4_g32_s0",
+      "measured_cache_mb": 10.9375,
+      "decode_tps": 73.6629361458524,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 9.24496155689976,
+      "perplexity": 1464.1973685237601
+    },
+    {
+      "context_length": 1024,
+      "config_key": "int4_g64_s512",
+      "measured_cache_mb": 9.84375,
+      "decode_tps": 68.00197941890568,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 8.514770109109818,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 2048,
+      "config_key": "fp16",
+      "measured_cache_mb": 63.0,
+      "decode_tps": 67.63264393931401,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 0.0,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int8_g64_s0",
+      "measured_cache_mb": 33.46875,
+      "decode_tps": 68.66100438899433,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 8.104396284940416,
+      "perplexity": 28.940279382223952
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int8_g32_s0",
+      "measured_cache_mb": 35.4375,
+      "decode_tps": 70.70540904866712,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 7.756967765904733,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int8_g64_s512",
+      "measured_cache_mb": 33.46875,
+      "decode_tps": 61.583663640590004,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 7.649641357557537,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int4_g64_s0",
+      "measured_cache_mb": 17.71875,
+      "decode_tps": 35.881588415547185,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 10.10430255138582,
+      "perplexity": 6770.380038480667
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int4_g32_s0",
+      "measured_cache_mb": 19.6875,
+      "decode_tps": 43.16651448092751,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 8.986924718207723,
+      "perplexity": 1464.1973685237601
+    },
+    {
+      "context_length": 2048,
+      "config_key": "int4_g64_s512",
+      "measured_cache_mb": 17.71875,
+      "decode_tps": 52.34376970755374,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 9.118116507832966,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 4096,
+      "config_key": "fp16",
+      "measured_cache_mb": 119.0,
+      "decode_tps": 64.35868131245246,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 0.0,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int8_g64_s0",
+      "measured_cache_mb": 63.21875,
+      "decode_tps": 63.57713132083492,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 9.111868934537599,
+      "perplexity": 28.940279382223952
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int8_g32_s0",
+      "measured_cache_mb": 66.9375,
+      "decode_tps": 46.05331170512755,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 5.6114293395005035,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int8_g64_s512",
+      "measured_cache_mb": 63.21875,
+      "decode_tps": 40.83230731148175,
+      "retrieval_accuracy": 0.6666666666666666,
+      "mean_kl_divergence": 9.5666419815108,
+      "perplexity": 28.827451925481085
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int4_g64_s0",
+      "measured_cache_mb": 33.46875,
+      "decode_tps": 30.64016445140217,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 9.920070576874247,
+      "perplexity": 6770.380038480667
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int4_g32_s0",
+      "measured_cache_mb": 37.1875,
+      "decode_tps": 66.03413548161616,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 8.765159696343646,
+      "perplexity": 1464.1973685237601
+    },
+    {
+      "context_length": 4096,
+      "config_key": "int4_g64_s512",
+      "measured_cache_mb": 33.46875,
+      "decode_tps": 46.14231629881703,
+      "retrieval_accuracy": 0.0,
+      "mean_kl_divergence": 10.162373253378211,
+      "perplexity": 28.827451925481085
+    }
+  ]
+}
